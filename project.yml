@@ -1,0 +1,68 @@
+name: CalorieTracker
+options:
+  bundleIdPrefix: com.taian.calorietracker
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_PREVIEWS: YES
+
+targets:
+  CalorieTracker:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: CalorieTracker
+    resources:
+      - path: CalorieTracker/Resources
+    info:
+      path: CalorieTracker/Info.plist
+      properties:
+        CFBundleDisplayName: Calorie Tracker
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: We need camera access so you can take a photo of your food to analyze its calories and nutrition.
+        NSPhotoLibraryUsageDescription: We need photo library access so you can pick an existing food photo to analyze.
+        ITSAppUsesNonExemptEncryption: false
+        NSAppTransportSecurity:
+          NSExceptionDomains:
+            localhost:
+              NSExceptionAllowsInsecureHTTPLoads: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.taian.calorietracker.app
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_EMIT_LOC_STRINGS: YES
+
+  CalorieTrackerTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: CalorieTrackerTests
+    dependencies:
+      - target: CalorieTracker
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.taian.calorietracker.tests
+        GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  CalorieTracker:
+    build:
+      targets:
+        CalorieTracker: all
+        CalorieTrackerTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - CalorieTrackerTests
