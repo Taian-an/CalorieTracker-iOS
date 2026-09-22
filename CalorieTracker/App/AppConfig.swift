@@ -17,11 +17,10 @@ enum AppConfig {
         #endif
     }
 
-    /// Not configured yet — no iOS OAuth client exists in Google Cloud Console for this app
-    /// (server/.env and calorie-app/.env.local both leave GOOGLE_IOS_CLIENT_ID blank).
-    /// Once you create one (Console → APIs & Services → Credentials → iOS client), paste its
-    /// client ID here and the Google sign-in button becomes visible automatically.
-    static let googleIOSClientID: String? = nil
+    /// iOS OAuth client registered in Google Cloud Console for bundle ID `com.taian.calorietracker.app`
+    /// ("Calorie iOS Native"). Client IDs aren't secrets — iOS clients have no client secret.
+    /// The server must list it in GOOGLE_IOS_CLIENT_ID or it rejects the resulting id_token.
+    static let googleIOSClientID: String? = "714318056157-o184lk87ld7gblsbvllihercisioidcl.apps.googleusercontent.com"
 
     static let networkTimeout: TimeInterval = 20
 }
