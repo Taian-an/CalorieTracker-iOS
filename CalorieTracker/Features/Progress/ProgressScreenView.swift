@@ -35,7 +35,7 @@ struct ProgressScreenView: View {
 
     private var firstTrackedDateText: String {
         guard let first = trackedDates.first, let date = DateKey.date(from: first) else { return "—" }
-        return date.formatted(date: .abbreviated, time: .omitted)
+        return date.formatted(.dateTime.year().month(.abbreviated).day().locale(localization.locale))
     }
 
     private var averages: (energy: Double, protein: Double, carbs: Double, fat: Double) {

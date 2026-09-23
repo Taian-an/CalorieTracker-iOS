@@ -64,7 +64,7 @@ struct FeedbackSheet: View {
             try await FeedbackAPI.submit(message: message, email: session.authEmail)
             isSent = true
         } catch {
-            errorMessage = error.localizedDescription
+            errorMessage = localization.message(for: error)
         }
     }
 }

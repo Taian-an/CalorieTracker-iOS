@@ -76,7 +76,7 @@ struct DiaryView: View {
             }
             .animation(.spring(response: 0.4, dampingFraction: 0.85), value: dateKey)
             .background(Theme.screenBackground)
-            .navigationTitle(selectedDate.formatted(.dateTime.month(.wide).day()))
+            .navigationTitle(selectedDate.formatted(.dateTime.month(.wide).day().locale(localization.locale)))
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { showCalendar = true } label: {

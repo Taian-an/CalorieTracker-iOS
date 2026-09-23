@@ -58,7 +58,7 @@ struct WeekStrip: View {
                 Text(date, format: .dateTime.weekday(.narrow))
                     .font(.caption2)
                     .foregroundStyle(.secondary)
-                Text(date, format: .dateTime.day())
+                Text("\(Calendar.current.component(.day, from: date))") // not .dateTime.day(): that is "23日" in Chinese and overflows the circle
                     .font(.callout.weight(isSelected ? .bold : .regular))
                     .frame(width: 30, height: 30)
                     .background {

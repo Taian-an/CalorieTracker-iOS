@@ -102,6 +102,21 @@ enum Strings {
         "camera.saved": [.zh: "已儲存！", .en: "Saved!"],
         "camera.failedTitle": [.zh: "辨識失敗", .en: "Analysis Failed"],
 
+        // MARK: Errors (see LocalizationStore.message(for:))
+        "error.network": [.zh: "無法連線到伺服器，請檢查網路後再試一次", .en: "Can't reach the server. Check your connection and try again."],
+        "error.timeout": [.zh: "連線逾時，請再試一次", .en: "The request timed out. Please try again."],
+        "error.server": [.zh: "伺服器暫時無法回應，請稍後再試", .en: "The server isn't responding right now. Please try again later."],
+        "error.generic": [.zh: "發生錯誤，請再試一次", .en: "Something went wrong. Please try again."],
+        "error.unauthorized": [.zh: "登入已過期，請重新登入", .en: "Your session expired. Please sign in again."],
+        "error.wrongCredentials": [.zh: "Email 或密碼錯誤", .en: "Incorrect email or password."],
+        "error.googleFailed": [.zh: "Google 登入失敗，請再試一次", .en: "Google sign-in failed. Please try again."],
+        "error.emailTaken": [.zh: "這個 Email 已經註冊過了", .en: "That email is already registered."],
+        "error.usernameTaken": [.zh: "這個使用者名稱已經有人使用", .en: "That username is already taken."],
+        "error.invalidRegister": [.zh: "請填寫有效的 Email、使用者名稱，密碼至少 4 碼", .en: "Enter a valid email and username, and a password of at least 4 characters."],
+        "error.noFood": [.zh: "照片裡找不到食物，換個角度再拍一次", .en: "No food found in the photo. Try another angle."],
+        "error.rateLimited": [.zh: "嘗試次數太多，請稍後再試", .en: "Too many attempts. Please try again later."],
+        "profile.languageHint": [.zh: "AI 辨識的食物名稱也會跟著切換。相機權限等系統視窗在下次開啟 App 時生效。", .en: "AI food names follow this setting too. System dialogs (like camera permission) switch the next time you open the app."],
+
         // MARK: Food lookup (Open Food Facts)
         "diary.searchPackaged": [.zh: "條碼 / 搜尋包裝食品", .en: "Barcode / Packaged Foods"],
         "lookup.title": [.zh: "食品庫", .en: "Food Database"],

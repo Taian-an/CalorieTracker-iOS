@@ -1,0 +1,2 @@
+"NSCameraUsageDescription" = "We need camera access so you can take a photo of your food to analyze its calories and nutrition, or scan a barcode.";
+"NSPhotoLibraryUsageDescription" = "We need photo library access so you can pick an existing food photo to analyze.";

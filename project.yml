@@ -24,6 +24,12 @@ targets:
       path: CalorieTracker/Info.plist
       properties:
         CFBundleDisplayName: Calorie Tracker
+        CFBundleDevelopmentRegion: en
+        # Lets iOS show its own UI (permission prompts, Cancel buttons, pickers) in the in-app
+        # language — LocalizationStore sets AppleLanguages to match. Texts in Resources/*.lproj.
+        CFBundleLocalizations:
+          - en
+          - zh-Hant
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait

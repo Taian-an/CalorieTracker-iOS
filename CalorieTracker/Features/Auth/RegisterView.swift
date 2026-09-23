@@ -75,7 +75,7 @@ struct RegisterView: View {
                     GoogleSignInButton { idToken in
                         await Task {
                             do { try await session.loginWithGoogle(idToken: idToken) }
-                            catch { errorMessage = error.localizedDescription }
+                            catch { errorMessage = localization.message(for: error, unauthorizedKey: "error.googleFailed") }
                         }.value
                     }
                 }
@@ -94,7 +94,7 @@ struct RegisterView: View {
         do {
             try await session.register(email: email, username: username, password: password, name: fullName.isEmpty ? nil : fullName)
         } catch {
-            errorMessage = error.localizedDescription
+            errorMessage = localization.message(for: error)
         }
     }
 }

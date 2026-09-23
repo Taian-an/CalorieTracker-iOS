@@ -105,7 +105,7 @@ struct DiaryCalendarSheet: View {
             dismiss()
         } label: {
             VStack(spacing: 4) {
-                Text(date, format: .dateTime.day())
+                Text("\(Calendar.current.component(.day, from: date))") // not .dateTime.day(): that is "23日" in Chinese and overflows the circle
                     .font(.caption)
                     .fontWeight(isSelected ? .bold : .regular)
                 Circle()

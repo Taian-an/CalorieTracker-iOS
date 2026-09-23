@@ -5,6 +5,7 @@ import SwiftUI
 struct RootView: View {
     @Environment(SessionStore.self) private var session
     @Environment(UserDataStore.self) private var userData
+    @Environment(LocalizationStore.self) private var localization
 
     var body: some View {
         Group {
@@ -16,6 +17,8 @@ struct RootView: View {
                 MainTabView()
             }
         }
+        // dates / weekday letters / number formatting follow the in-app language, not the phone's
+        .environment(\.locale, localization.locale)
         .animation(.default, value: session.isAuthenticated)
         .animation(.default, value: userData.profile.isOnboarded)
     }

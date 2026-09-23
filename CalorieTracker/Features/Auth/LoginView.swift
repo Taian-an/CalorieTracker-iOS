@@ -96,7 +96,7 @@ struct LoginView: View {
         do {
             try await session.login(email: email, password: password)
         } catch {
-            errorMessage = error.localizedDescription
+            errorMessage = localization.message(for: error, unauthorizedKey: "error.wrongCredentials")
         }
     }
 
@@ -107,7 +107,7 @@ struct LoginView: View {
         do {
             try await session.loginWithGoogle(idToken: idToken)
         } catch {
-            errorMessage = error.localizedDescription
+            errorMessage = localization.message(for: error, unauthorizedKey: "error.googleFailed")
         }
     }
 }

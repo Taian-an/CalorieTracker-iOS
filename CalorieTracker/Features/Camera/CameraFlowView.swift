@@ -187,9 +187,9 @@ struct CameraFlowView: View {
         errorMessage = nil
         defer { isAnalyzing = false }
         do {
-            result = try await AnalyzeAPI.analyze(image: image, description: description)
+            result = try await AnalyzeAPI.analyze(image: image, description: description, language: localization.apiLanguageCode)
         } catch {
-            errorMessage = error.localizedDescription
+            errorMessage = localization.message(for: error)
         }
     }
 

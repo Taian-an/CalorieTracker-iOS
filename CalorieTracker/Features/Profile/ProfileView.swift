@@ -165,6 +165,10 @@ struct ProfileView: View {
                 }
             }
             .padding(.vertical, 8)
+            Text(localization.t("profile.languageHint"))
+                .font(.caption2)
+                .foregroundStyle(.secondary)
+                .padding(.bottom, 8)
             Divider()
 
             ForEach(["profile.appearance", "profile.notifications", "profile.units", "profile.privacy", "profile.about"], id: \.self) { key in

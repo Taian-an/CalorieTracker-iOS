@@ -1,0 +1,2 @@
+"NSCameraUsageDescription" = "需要使用相機拍攝食物照片來分析熱量與營養，或掃描商品條碼。";
+"NSPhotoLibraryUsageDescription" = "需要存取相簿，讓你選擇已有的食物照片來分析。";

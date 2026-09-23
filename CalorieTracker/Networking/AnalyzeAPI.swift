@@ -8,11 +8,12 @@ enum AnalyzeAPI {
     private static let pollInterval: Duration = .milliseconds(500)
     private static let maxPollDuration: Duration = .seconds(30)
 
-    static func analyze(image: UIImage, description: String?) async throws -> AnalyzeResultDTO {
+    /// `language` ("en" | "zh") picks the language of the AI's food name and item breakdown.
+    static func analyze(image: UIImage, description: String?, language: String) async throws -> AnalyzeResultDTO {
         guard let imageData = downscaled(image).jpegData(compressionQuality: 0.8) else {
             throw APIError.encodingFailed
         }
-        var fields: [String: String] = [:]
+        var fields: [String: String] = ["lang": language]
         if let description, !description.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             fields["description"] = description
         }
