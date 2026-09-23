@@ -49,6 +49,7 @@
 		96F56590EDD9C342A8369274 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996A24A1C739DB58B1DE04E /* Theme.swift */; };
 		9BE5EA08E3B6E2C80A4D374F /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAEE08929310478B26F29B9 /* AppConfig.swift */; };
 		A59A59E0D1EF35636E996E15 /* FeedbackSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6A789DAE11E51B294D112 /* FeedbackSheet.swift */; };
+		A82B3BD8B056E6FBE4101A8F /* AppConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813ED1EB80E927D2CB149C1 /* AppConfigTests.swift */; };
 		AB4D7F596CA1DE6912C5512C /* FoodDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A688B9594D019A2BAE9BC /* FoodDTOs.swift */; };
 		B02EE88A03B61CCFD486D131 /* LogsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E68CFB57BEDE115E0DDDED /* LogsAPI.swift */; };
 		B3C1F251CCAC28841C899522 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0725288466D09AB6FA11404 /* MainTabView.swift */; };
@@ -91,6 +92,7 @@
 		24E68CFB57BEDE115E0DDDED /* LogsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsAPI.swift; sourceTree = "<group>"; };
 		2BDE76634EC58CF7153DEC63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3576E4C7D75491CCFEAE2B84 /* ProfileRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRecord.swift; sourceTree = "<group>"; };
+		3813ED1EB80E927D2CB149C1 /* AppConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigTests.swift; sourceTree = "<group>"; };
 		3D3BB344AEE6044352177C49 /* WeekStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekStrip.swift; sourceTree = "<group>"; };
 		432EC6FFD82F8289AE21EF32 /* CalorieTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTrackerApp.swift; sourceTree = "<group>"; };
 		559AAA245A3507149D1852AB /* BarcodeScannerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerSheet.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 		D97AA86464B21D9640D5FD9D /* CalorieTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				3813ED1EB80E927D2CB149C1 /* AppConfigTests.swift */,
 				800DAA0686F727CCFC30BA29 /* DTODecodingTests.swift */,
 				E9A2CF33371D3B6177EE0ECE /* HealthCalculationsTests.swift */,
 				086DD2F5976887579D0F7DCE /* OpenFoodFactsDecodingTests.swift */,
@@ -457,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82B3BD8B056E6FBE4101A8F /* AppConfigTests.swift in Sources */,
 				5E45AC175D975AA14866EDA9 /* DTODecodingTests.swift in Sources */,
 				170413F07C11DE4E3F3E367D /* HealthCalculationsTests.swift in Sources */,
 				84FBA2C096A376095892F090 /* OpenFoodFactsDecodingTests.swift in Sources */,

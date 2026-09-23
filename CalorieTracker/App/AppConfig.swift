@@ -2,19 +2,20 @@ import Foundation
 
 /// Central place for environment-specific configuration.
 enum AppConfig {
-    /// Local dev server, matches `calorie-app/.env.local`'s active `EXPO_PUBLIC_API_URL`.
-    static let localAPIBaseURL = URL(string: "http://localhost:3000")!
-
     /// Deployed production server, matches `deploy.sh`'s `PROD_API_URL`.
     static let productionAPIBaseURL = URL(string: "https://20-46-181-25.nip.io/api")!
 
-    /// Debug builds hit the local dev server; Release builds hit production.
+    /// Every build — including Debug runs straight from Xcode — talks to production, so the app
+    /// works out of the box without a local backend.
+    ///
+    /// To work against a local server instead, set an `API_BASE_URL` environment variable in
+    /// Product → Scheme → Edit Scheme → Run → Arguments (e.g. `http://localhost:3000`).
     static var apiBaseURL: URL {
-        #if DEBUG
-        return localAPIBaseURL
-        #else
+        if let override = ProcessInfo.processInfo.environment["API_BASE_URL"],
+           let url = URL(string: override), url.scheme != nil {
+            return url
+        }
         return productionAPIBaseURL
-        #endif
     }
 
     /// iOS OAuth client registered in Google Cloud Console for bundle ID `com.taian.calorietracker.app`
