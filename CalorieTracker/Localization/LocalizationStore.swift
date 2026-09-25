@@ -42,10 +42,9 @@ final class LocalizationStore {
         if let raw = UserDefaults.standard.string(forKey: Self.storageKey), let saved = AppLanguage(rawValue: raw) {
             language = saved
         } else {
-            // First launch: start in the phone's language (any Chinese → 繁體中文, anything else →
-            // English) instead of always Chinese, so an English-speaking user isn't met by a
-            // Chinese login screen they can't switch out of.
-            language = Locale.preferredLanguages.first?.hasPrefix("zh") == true ? .zh : .en
+            // First launch defaults to English; the language menu on the login screen and in
+            // Profile lets the user switch to 繁體中文, and that choice is saved.
+            language = .en
         }
         Self.applySystemLanguage(language)
     }

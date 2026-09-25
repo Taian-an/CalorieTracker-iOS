@@ -17,6 +17,17 @@ final class LocalizationTests: XCTestCase {
         store.language = savedLanguage // don't leak the test's choice into the simulator's app state
     }
 
+    /// A first launch (nothing saved yet) starts in English, whatever the phone's language is.
+    func testFirstLaunchDefaultsToEnglish() {
+        let key = "app.language"
+        let saved = UserDefaults.standard.string(forKey: key)
+        defer {
+            if let saved { UserDefaults.standard.set(saved, forKey: key) } else { UserDefaults.standard.removeObject(forKey: key) }
+        }
+        UserDefaults.standard.removeObject(forKey: key)
+        XCTAssertEqual(LocalizationStore().language, .en)
+    }
+
     func testEveryStringHasBothLanguages() {
         for (key, translations) in Strings.table {
             XCTAssertFalse((translations[.en] ?? "").isEmpty, "\(key) missing English")
