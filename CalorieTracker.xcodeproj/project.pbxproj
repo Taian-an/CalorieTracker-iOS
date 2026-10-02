@@ -43,6 +43,7 @@
 		7839F12D71CC064CFF81DD3D /* CameraFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF09C1304A24CF9563B96D2 /* CameraFlowView.swift */; };
 		78893CDBBE3177371C07372E /* ProfileRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3576E4C7D75491CCFEAE2B84 /* ProfileRecord.swift */; };
 		7A97A8A64D523CEF782ACB07 /* AuthDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4DABA2CB7C45919A8CD5FF /* AuthDTOs.swift */; };
+		7B5FBBFF1BB2920BA63B80DC /* CoachAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330BBD51DCE578A8C52E845 /* CoachAPI.swift */; };
 		84FBA2C096A376095892F090 /* OpenFoodFactsDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086DD2F5976887579D0F7DCE /* OpenFoodFactsDecodingTests.swift */; };
 		8737E1757D35C5CCC09A001F /* WeekStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3BB344AEE6044352177C49 /* WeekStrip.swift */; };
 		8C07057050F76BB223F6C9B0 /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28333B14D97CA997956C42D /* CameraCaptureView.swift */; };
@@ -97,6 +98,7 @@
 		3813ED1EB80E927D2CB149C1 /* AppConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigTests.swift; sourceTree = "<group>"; };
 		3D3BB344AEE6044352177C49 /* WeekStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekStrip.swift; sourceTree = "<group>"; };
 		432EC6FFD82F8289AE21EF32 /* CalorieTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTrackerApp.swift; sourceTree = "<group>"; };
+		5330BBD51DCE578A8C52E845 /* CoachAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachAPI.swift; sourceTree = "<group>"; };
 		559AAA245A3507149D1852AB /* BarcodeScannerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerSheet.swift; sourceTree = "<group>"; };
 		57EF6A847BDAA38D883FB9F9 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		625CD6AB8A44EB0820B48055 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				7FEC24D580BC8A0CA10BFCC4 /* AnalyzeAPI.swift */,
 				F6AE3E7B4D4C06CDDACFCF7F /* APIClient.swift */,
 				E3CDD779DC339474B9E1A0AF /* AuthAPI.swift */,
+				5330BBD51DCE578A8C52E845 /* CoachAPI.swift */,
 				01C689E07E4ECDB6652F6233 /* KeychainStore.swift */,
 				24E68CFB57BEDE115E0DDDED /* LogsAPI.swift */,
 				FDD1800C2BEE88E5407B296F /* OpenFoodFactsAPI.swift */,
@@ -495,6 +498,7 @@
 				DEF9B3F19FC8C1E122C5E74B /* CalorieTrackerApp.swift in Sources */,
 				8C07057050F76BB223F6C9B0 /* CameraCaptureView.swift in Sources */,
 				7839F12D71CC064CFF81DD3D /* CameraFlowView.swift in Sources */,
+				7B5FBBFF1BB2920BA63B80DC /* CoachAPI.swift in Sources */,
 				2494AAE04CA5E4D37959860F /* CoachView.swift in Sources */,
 				EBDEBA71B74764920738FD5C /* DateKey.swift in Sources */,
 				64889993EA0BF98D0BC51297 /* DayLogRecord.swift in Sources */,

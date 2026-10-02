@@ -116,15 +116,16 @@ struct OnboardingView: View {
     private var durationStep: some View {
         VStack(spacing: 20) {
             Text(localization.t("onboarding.durationTitle")).font(.title2.bold())
-            HStack(spacing: 10) {
+            LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
                 ForEach([1, 3, 6, 12], id: \.self) { months in
                     let isSelected = viewModel.durationMonths == months
                     Button {
                         viewModel.durationMonths = months
                     } label: {
                         Text("\(months) " + localization.t("onboarding.months"))
-                            .padding(.horizontal, 14)
-                            .padding(.vertical, 10)
+                            .lineLimit(1)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
                             .background(isSelected ? Theme.calorie : Theme.cardBackground, in: Capsule())
                             .foregroundStyle(isSelected ? .white : .primary)
                     }

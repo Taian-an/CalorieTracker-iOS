@@ -157,8 +157,11 @@ enum Strings {
         "lookup.error.decoding": [.zh: "資料格式無法解析", .en: "Couldn't read the response"],
 
         // MARK: Coach
-        "coach.title": [.zh: "AI 教練即將推出", .en: "AI Coach Coming Soon"],
-        "coach.subtitle": [.zh: "我們正在打造你的專屬營養教練，敬請期待！", .en: "We're building your personal nutrition coach. Stay tuned!"],
+        "coach.navTitle": [.zh: "AI 教練", .en: "AI Coach"],
+        "coach.greeting": [.zh: "嗨！我是你的 AI 教練，有任何飲食或健身上的問題都可以問我 💪", .en: "Hi! I'm your AI coach — ask me anything about nutrition or fitness 💪"],
+        "coach.placeholder": [.zh: "輸入訊息...", .en: "Type a message..."],
+        "coach.error": [.zh: "AI 教練暫時無法回應，請稍後再試", .en: "AI coach is temporarily unavailable, please try again later"],
+        "coach.thinking": [.zh: "思考中...", .en: "Thinking..."],
 
         // MARK: Progress
         "progress.overall": [.zh: "整體進度", .en: "Overall Progress"],
