@@ -3,7 +3,7 @@ import Foundation
 /// Central place for environment-specific configuration.
 enum AppConfig {
     /// Deployed production server, matches `deploy.sh`'s `PROD_API_URL`.
-    static let productionAPIBaseURL = URL(string: "https://20-46-181-25.nip.io/api")!
+    static let productionAPIBaseURL = URL(string: "https://app.calorietracks.com/api")!
 
     /// Every build — including Debug runs straight from Xcode — talks to production, so the app
     /// works out of the box without a local backend.
