@@ -146,6 +146,8 @@ final class APIClient {
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
+        // The back end's daily AI quotas (5 free scans / coach messages) reset at the user's local midnight.
+        urlRequest.setValue(TimeZone.current.identifier, forHTTPHeaderField: "X-Timezone")
 
         let token = KeychainStore.loadToken()
         switch auth {

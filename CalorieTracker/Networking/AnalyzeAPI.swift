@@ -22,7 +22,7 @@ enum AnalyzeAPI {
             imageData: imageData,
             imageFieldName: "images", // must match multer's upload.array('images', 5) on the server
             fields: fields,
-            auth: .optional
+            auth: .required // AI scans require an account since 2026-10 (they cost money per call)
         )
         if let result = response.result { return result }
         guard let analysisId = response.analysisId else {

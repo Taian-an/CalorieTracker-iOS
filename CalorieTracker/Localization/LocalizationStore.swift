@@ -81,6 +81,7 @@ final class LocalizationStore {
             case (400, let m) where m.hasPrefix("Invalid email, username or password"): return t("error.invalidRegister")
             case (_, "No food data found"): return t("error.noFood")
             case (504, _): return t("error.timeout")
+            case (429, "daily_limit"): return t("error.dailyLimit")
             case (429, _): return t("error.rateLimited")
             case (500..., _): return t("error.server")
             default: return t("error.generic")

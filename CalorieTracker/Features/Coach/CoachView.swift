@@ -110,7 +110,9 @@ struct CoachView: View {
                 let reply = try await CoachAPI.send(messages: history, language: localization.apiLanguageCode)
                 messages.append(CoachChatMessage(role: "model", text: reply))
             } catch {
-                messages.append(CoachChatMessage(role: "model", text: localization.t("coach.error"), isError: true))
+                // Out of today's free coach messages → say so; anything else → the generic "unavailable" bubble.
+                let isDailyLimit = (error as? APIError).map { if case .server(429, "daily_limit") = $0 { return true } else { return false } } ?? false
+                messages.append(CoachChatMessage(role: "model", text: localization.t(isDailyLimit ? "error.dailyLimit" : "coach.error"), isError: true))
             }
         }
     }

@@ -45,6 +45,13 @@ final class LocalizationTests: XCTestCase {
         XCTAssertEqual(store.message(for: serverEnglish), Strings.table["error.emailTaken"]?[.zh])
     }
 
+    /// The server answers 429 "daily_limit" when today's free AI uses are gone — a specific message, not "too many attempts".
+    func testDailyLimitMessage() {
+        store.language = .en
+        XCTAssertEqual(store.message(for: APIError.server(status: 429, message: "daily_limit")), Strings.table["error.dailyLimit"]?[.en])
+        XCTAssertEqual(store.message(for: APIError.server(status: 429, message: "Too many attempts")), Strings.table["error.rateLimited"]?[.en])
+    }
+
     func testNetworkAndLoginErrors() {
         store.language = .en
         XCTAssertEqual(store.message(for: APIError.transport(URLError(.notConnectedToInternet))), Strings.table["error.network"]?[.en])

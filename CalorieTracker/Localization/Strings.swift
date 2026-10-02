@@ -114,6 +114,7 @@ enum Strings {
         "error.usernameTaken": [.zh: "這個使用者名稱已經有人使用", .en: "That username is already taken."],
         "error.invalidRegister": [.zh: "請填寫有效的 Email、使用者名稱，密碼至少 4 碼", .en: "Enter a valid email and username, and a password of at least 4 characters."],
         "error.noFood": [.zh: "照片裡找不到食物，換個角度再拍一次", .en: "No food found in the photo. Try another angle."],
+        "error.dailyLimit": [.zh: "今天的免費 AI 次數已經用完了（每天 5 次），明天午夜會重置。", .en: "You've used today's free AI uses (5 per day). They reset at midnight."],
         "error.rateLimited": [.zh: "嘗試次數太多，請稍後再試", .en: "Too many attempts. Please try again later."],
         "profile.languageHint": [.zh: "AI 辨識的食物名稱也會跟著切換。相機權限等系統視窗在下次開啟 App 時生效。", .en: "AI food names follow this setting too. System dialogs (like camera permission) switch the next time you open the app."],
 
